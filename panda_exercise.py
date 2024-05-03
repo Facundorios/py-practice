@@ -1,18 +1,7 @@
-# Ejercicio de Pandas
-
-# Se les ha proporcionado un archivo CSV que contiene una lista de 250 personas junto con sus fechas de nacimiento, que van desde 1990 hasta 2004. Su tarea es la siguiente:
-
-# ● Importar los datos del archivo, pero solo incluir a aquellas personas que sean mayores de 25 años.
-
-# ● Ordenar las edades en forma ascendente.
-
-# ● Determinar cuántas edades distintas existen y la frecuencia de cada una.
-
-# ● Crear un DataFrame que incluya dos columnas: una para las edades y otra para la frecuencia de cada edad.
-import pandas as pd
+    import pandas as pd
 import matplotlib.pyplot as plt
 
-#"Importación" y lectura del archivo
+# "Importación" y lectura del archivo
 df = pd.read_csv("edades.csv")
 
 # Importar los datos del archivo, pero solo incluir a aquellas personas que sean mayores de 25 años.
@@ -64,12 +53,12 @@ def odlers_than_25(df):
 
     # Creamos un dataframe con los datos, usando la propiedad list y dentro pasamos el ages_diccioanry con el metodo items, y le pasamos los nombres de las columnas.
     df = pd.DataFrame(list(ages_diccionary.items()), columns=["Edades", "fi"])
-    
+
     plt.plot(df["Edades"], df["fi"])
     plt.title("Frecuencia de edades")
     plt.show()
-    
-    
+
+    print(df)
     return df
 
 
